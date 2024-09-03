@@ -1,0 +1,22 @@
+/* Logo.module.css */
+.container {
+  display: flex;
+  align-items: center;
+  /* Logo ve yazıyı dikey olarak ortalayın */
+  justify-content: center;
+  /* Yatayda ortalayın */
+  gap: 20px;
+  /* Logo ve yazı arasındaki boşluk */
+}
+
+.logo {
+  width: 100px;
+  /* Logonun genişliği */
+  height: auto;
+  /* Oranını koruyarak yükseklik ayarlanır */
+}
+
+.heading {
+  font-size: 24px;
+  color: aliceblue;
+}

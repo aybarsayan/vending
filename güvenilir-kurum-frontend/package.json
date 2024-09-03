@@ -1,0 +1,72 @@
+{
+  "name": "web3-login-demo",
+  "version": "1.0.1",
+  "description": "Showcase to login on a website with Kilt-Credentials",
+  "main": "index.ts",
+  "repository": "git@github.com:KILTprotocol/web3-login-demo.git",
+  "author": "KILT <info@kilt.io>",
+  "license": "BSD-4-Clause",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "engines": {
+    "node": ">= v18.17.0"
+  },
+  "scripts": {
+    "environment": "ts-node ./launchScripts/genesisEnvironmentVariables.ts",
+    "did-configuration": "ts-node ./launchScripts/genesisWellKnownDidConfig.ts",
+    "build:frontend": "cd ./frontend && yarn build",
+    "build:backend": "cd ./backend && yarn build",
+    "build": "yarn build:frontend && yarn build:backend",
+    "start:frontend": "ts-node ./launchScripts/updatePorts.ts && cd ./frontend && yarn start",
+    "start:backend": "cd ./backend && yarn start",
+    "start-prod:backend": "cd ./backend && yarn start-prod",
+    "start": "concurrently 'yarn:start:*'",
+    "lint": "concurrently 'yarn:lint:*'",
+    "lint:frontend": "eslint --ext .js,.ts --config ./.eslintrc.json \"frontend/**/*.ts\"",
+    "lint:backend": "eslint --ext .js,.ts --config ./.eslintrc.json \"backend/**/*.ts\"",
+    "lint:scripts": "eslint --ext .js,.ts --config ./.eslintrc.json \"launchScripts/**/*.ts\"",
+    "fix": "concurrently 'yarn:fix:*'",
+    "fix:frontend": "eslint --ext .js,.ts --config ./.eslintrc.json --fix \"frontend/**/*.ts\"",
+    "fix:backend": "eslint --ext .js,.ts --config ./.eslintrc.json --fix \"backend/**/*.ts\"",
+    "fix:scripts": "eslint --ext .js,.ts --config ./.eslintrc.json --fix \"launchScripts/**/*.ts\""
+  },
+  "devDependencies": {
+    "@types/node": "^20.9.1",
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
+    "@typescript-eslint/parser": "^5.62.0",
+    "concurrently": "^8.2.2",
+    "eslint": ">=8.31.0",
+    "eslint-config-prettier": "^8.10.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "nodemon": "^2.0.20",
+    "prettier": "^2.8.8",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "@kiltprotocol/sdk-js": "^0.35.0",
+    "@kiltprotocol/types": "^0.35.0",
+    "@kiltprotocol/vc-export": "^0.35.0",
+    "@polkadot/util": "10.4.2",
+    "@polkadot/util-crypto": "10.4.2",
+    "@types/valid-url": "^1.0.7",
+    "dotenv": "^16.0.3",
+    "firebase": "^10.13.0",
+    "ts-node": "^10.9.1",
+    "valid-url": "^1.0.9"
+  },
+  "resolutions": {
+    "@polkadot/api": "9.10.2",
+    "@polkadot/rpc-provider": "9.10.2",
+    "@polkadot/keyring": "10.4.2",
+    "@polkadot/util": "10.4.2",
+    "@polkadot/util-crypto": "10.4.2",
+    "@polkadot/types": "9.10.2"
+  },
+  "packageManager": "yarn@3.6.1"
+}
