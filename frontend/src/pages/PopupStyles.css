@@ -1,0 +1,41 @@
+.popup-content {
+    font-family: Arial, sans-serif;
+    text-align: center; /* İçeriği ortalamak için text-align ayarı */
+  }
+  
+  .popup-content h3 {
+    margin-top: 0;
+    font-size: 1.2em;
+    color: #333;
+  }
+  
+  .popup-content ul {
+    padding-left: 20px; /* Madde işaretlerinin düzgün görünmesi için padding ekliyoruz */
+    margin: 10px 0;
+    list-style-type: disc; /* Madde işaretlerini (bullet points) etkinleştiriyoruz */
+    text-align: left; /* Listeyi sola hizalıyoruz */
+  }
+  
+  .popup-content ul li {
+    margin-bottom: 5px;
+  }
+  
+  .donate-button {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    width: 100%;
+    max-width: 200px;
+  }
+  
+  .donate-button:hover {
+    background-color: #0056b3;
+  }

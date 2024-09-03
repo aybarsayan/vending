@@ -1,0 +1,33 @@
+{
+  "name": "feza-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "yarn node --max-old-space-size=4096 -r ts-node/register app.ts"
+  },
+  "engines": {
+    "node": "18.x"
+  },
+  "keywords": [],
+  "author": "Aybars Göktuğ Ayan <aybarsayan@gmail.com>",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@kiltprotocol/sdk-js": "^0.35.1",
+    "@types/cors": "^2.8.17",
+    "@types/nodemailer": "^6.4.15",
+    "axios": "^1.7.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "firebase": "^10.13.0",
+    "firebase-admin": "^12.3.1",
+    "nodemailer": "6.9.13",
+    "nodemon": "^3.1.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4",
+    "web3": "^4.12.1"
+  },
+  "devDependencies": {}
+}

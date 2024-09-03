@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Yara Bandı",
+    "price": 100,
+    "imgUrl": "/imgs/Yara Bandı.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Pastil",
+    "price": 200,
+    "imgUrl": "/imgs/Pastil.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Batarya",
+    "price": 300,
+    "imgUrl": "/imgs/Batarya.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Diş Macunu",
+    "price": 400,
+    "imgUrl": "/imgs/Diş Macunu.jpg"
+  }
+]
